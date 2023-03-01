@@ -1,0 +1,3 @@
+(a) float -> bool
+(b) int -> float, ->double
+(c) cval -> int, ->double

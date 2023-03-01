@@ -1,0 +1,1 @@
+将i/j转换成double并赋给slope
