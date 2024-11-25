@@ -1,6 +1,0 @@
-a) 每个case少了break
-b) 声明要放外面
-c) case 1:  case 3: ...需要这样
-d) ival 这些都需要是整型
-
-

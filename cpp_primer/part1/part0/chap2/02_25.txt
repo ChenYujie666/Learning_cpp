@@ -1,8 +1,0 @@
-(a) int* ip,i, &r = i;
-ip int pointer; i int; r ref
-(b) int i, *ip = 0;
-i int  ip int pointer 
-(c) int* ip, ip2;
-ip ip2 pointer
-
-

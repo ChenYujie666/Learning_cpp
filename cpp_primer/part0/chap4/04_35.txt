@@ -1,4 +1,0 @@
-a) a->int, int -> char
-b) ival -> float, -> float;
-c) ui -> float, -> double
-d) ival -> float , -> double;

@@ -1,2 +1,0 @@
-a)iter定义应该在while外面，否则每次都会重新声明一遍
-b)status定义应该在while外，否则if访问不到
