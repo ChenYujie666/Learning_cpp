@@ -1,0 +1,2 @@
+while(cin >> i) /* ... */
+when input eof or cin failed (rdstate = false) 

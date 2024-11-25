@@ -1,0 +1,4 @@
+extern int ix = 1024;//definition
+int iy; //declear
+extern int iz; //definition
+

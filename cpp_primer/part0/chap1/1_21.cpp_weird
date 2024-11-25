@@ -1,0 +1,27 @@
+#include<iostream>
+#include"Sales_item.h"
+using namespace std;
+int main(){
+string s1 = "c",s2 = "c";
+Sales_item item1(s1), item2(s2), item_sum(s1);
+cout << "isbn\t" << "num\t" <<"price\t"<< "rev\t" << endl ;
+
+int c_price = 12;
+item1.units_sold = 30;
+item1.revenue = c_price;
+cout << item1 << endl;
+//cin >> item1;
+
+
+
+
+item2.units_sold = 60;
+item2.revenue = c_price;
+cout << item2 << endl;
+cout << endl;
+
+item_sum = item1+item2;
+item_sum.revenue = c_price;
+cout << item_sum << endl;
+// the calulation of item_sum.revenue is not clear;
+}

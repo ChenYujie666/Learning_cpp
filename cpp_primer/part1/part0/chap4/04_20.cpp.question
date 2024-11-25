@@ -1,0 +1,18 @@
+#include<iostream>
+#include<string>
+#include<vector>
+
+using namespace std;
+
+int main(){
+vector<int> ivec = {2,4,6,8};
+auto iter = ivec.begin()+1;
+//cout << *iter++ << endl; // 合法 解引并指向下一个位置
+//cout << (*iter)++ << endl; // 合法 同上
+//cout << ivec.empty() << endl; // 不合法
+//cout << iter->empty() << endl; // 不合法
+// cout << ++*iter << endl; // 不合法 字符串不能++
+//cout << iter++->empty() << endl; // 不合法
+
+
+}
