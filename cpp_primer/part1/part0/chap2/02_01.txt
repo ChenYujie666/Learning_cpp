@@ -1,9 +1,0 @@
-what's the difference among int, long, long long and short?
-
-
-their range and size is different;
-
-unsigned and signed 
-unsigned can only represent the postive numbers;
-
-double is more precise than float 
