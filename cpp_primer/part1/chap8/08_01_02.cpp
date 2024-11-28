@@ -3,17 +3,16 @@
 using namespace std;
 
 istream& func(istream& is){
-	int i;
+	string s;
 	int index = 0;
 	auto is_state = is.rdstate();
 	while(!is_state){
-		is >> i;
-
+		is >> s;
 		is_state = is.rdstate();
 
 		if(!is_state){
 			cout << "this is the " << ++index << "th run." << endl;
-			cout << i << "\t" << endl;
+			cout << s << "\t" << endl;
 			cout << endl;
 			// 为什么这边会多运行一次?? confusing 啊
 			// why this run again after inputing "eof"
@@ -42,12 +41,16 @@ istream& func(istream& is){
 
 
 int main(){
-// ofstream ofs;
-istream& is(cin);
-//ofs.clear();
-//cout << ofs.rdstate() << endl;
-func(is);
-return 0;
+	// ofstream ofs;
+	istream& is(cin);
+	//ofs.clear();
+	//cout << ofs.rdstate() << endl;
+	func(is);
+
+	auto is_state = is.rdstate();
+	cout << is_state << endl;
+
+	return 0;
 }
 
 
