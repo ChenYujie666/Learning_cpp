@@ -1,0 +1,4 @@
+9.3
+如果begin与end相等，则范围为空
+如果begin与end不等，则范围至少包含一个元素，且begin指向该范围中的第一个元素
+我们可以对begin递增若干次，使得begin==end
