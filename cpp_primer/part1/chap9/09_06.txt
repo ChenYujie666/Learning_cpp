@@ -1,0 +1,1 @@
+list 的iterator不能用> < 大于小于来对比，因为他是会改变的的。要改成iter1!= iter2
