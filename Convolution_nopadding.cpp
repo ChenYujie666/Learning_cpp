@@ -12,6 +12,17 @@
 
 using namespace std;
 #define EXECUTION_TIMES (10)
+
+/**
+ * @brief 生成二维高斯核
+ * 
+ * @param kernel 指向二维高斯核的指针
+ * @param row 高斯核的行数
+ * @param col 高斯核的列数
+ * @param a 高斯函数的振幅
+ * @param b 高斯函数的均值
+ * @param c 高斯函数的标准差
+ */
 void guassian(float **kernel, int row, int col, float a, float b, float c)
 {
     for (int i = 0; i <= row / 2; i++)
@@ -27,6 +38,20 @@ void guassian(float **kernel, int row, int col, float a, float b, float c)
     }
 }
 
+/**
+ * @brief 生成一维高斯核
+ * 
+ * @param kernel_row 指向一维高斯核行向量的指针
+ * @param kernel_col 指向一维高斯核列向量的指针
+ * @param row 高斯核的行数
+ * @param col 高斯核的列数
+ * @param a1 高斯函数的振幅
+ * @param b1 高斯函数的均值
+ * @param c1 高斯函数的标准差
+ * @param a2 高斯函数的振幅
+ * @param b2 高斯函数的均值
+ * @param c2 高斯函数的标准差
+ */
 void guassian_1d(vector<int> &kernel_row, vector<int> &kernel_col, int row, int col, int a1, int b1, int c1, int a2, int b2, int c2)
 {
     for (int i = 0; i <= row / 2; i++)
@@ -43,6 +68,17 @@ void guassian_1d(vector<int> &kernel_row, vector<int> &kernel_col, int row, int 
     }
 }
 
+/**
+ * @brief 进行二维卷积操作
+ * 
+ * @param input 输入图像
+ * @param output 输出图像
+ * @param kernel 卷积核
+ * @param mm 输入图像的行数
+ * @param nn 输入图像的列数
+ * @param kernel_row 卷积核的行数
+ * @param kernel_col 卷积核的列数
+ */
 void convolution(vector<vector<int>> &input, vector<vector<int>> &output, vector<vector<int>> kernel, int mm, int nn, int kernel_row, int kernel_col)
 {
     // cout << "convolution" << endl;
@@ -65,6 +101,19 @@ void convolution(vector<vector<int>> &input, vector<vector<int>> &output, vector
         }
     }
 }
+
+/**
+ * @brief 进行一维卷积操作
+ * 
+ * @param input 输入图像
+ * @param output 输出图像
+ * @param kernel_1d_row 一维卷积核行向量
+ * @param kernel_1d_col 一维卷积核列向量
+ * @param mm 输入图像的行数
+ * @param nn 输入图像的列数
+ * @param kernel_row 卷积核的行数
+ * @param kernel_col 卷积核的列数
+ */
 void convolution_1by1(vector<vector<int>> &input, vector<vector<int>> &output, vector<int> kernel_1d_row, vector<int> kernel_1d_col, int mm, int nn, int kernel_row, int kernel_col)
 {
     vector<vector<float>> output1(mm, vector<float>(nn, 0));
@@ -101,6 +150,13 @@ void convolution_1by1(vector<vector<int>> &input, vector<vector<int>> &output, v
         }
     }
 }
+
+/**
+ * @brief 测试函数
+ * 
+ * @return true  测试失败
+ * @return false 测试通过
+ */
 bool test()
 {
 
@@ -197,7 +253,7 @@ int main()
     {
         if (test())
         {
-            cout << "test failed" << endl;
+            cerr << "test failed" << endl; // 测试如果有卷积结果不相对的，抛出错误
             return 1;
         }
     }
