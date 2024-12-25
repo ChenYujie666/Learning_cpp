@@ -10,26 +10,51 @@ using namespace std;
 
 
 int main(){
-    forward_list<int> il = {1,2,3,4,5,6,7,8,9,10};
-    auto pre = il.before_begin();
-    auto cur = il.begin();
-    while(cur!= il.end()){
+    forward_list<int> ifl = {1,2,3,4,5,6,7,8,9,10};
+    auto pre = ifl.before_begin();
+    auto cur = ifl.begin();
+    while(cur!= ifl.end()){
         if(*cur % 2 == 0){
-            cur = il.erase_after(pre);
+            cur = ifl.erase_after(pre);
         }else{
-            pre = il.insert_after(pre, *cur);
+            pre = ifl.insert_after(pre, *cur);
             pre++;
             cur = pre;
             cur++;
         }
     }
 
-    cur = il.begin();
-    while(cur!= il.end()){
+    cur = ifl.begin();
+    while(cur!= ifl.end()){
         cout << *cur << ", ";
         cur++;
     }
 
+
+    list<int> il = {0,1,2,3,4,5,6,7,8,9,10};
+    auto iter = il.begin();
+    while(iter != il.end()){
+        // cout << "iter = " << *iter << endl;
+        if(*iter % 2 != 0){
+            // int a = *iter;
+            iter = il.insert(iter, *iter);
+            iter++;
+        }
+        else{
+            iter = il.erase(iter);
+            // iter++;
+        }
+        iter++;
+
+        // 
+    }
+    
+    iter = il.begin();
+    cout << endl;
+    while(iter!=il.end()){
+        cout << *iter << ", ";
+        iter++;
+    }
 
 }
 
