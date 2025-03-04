@@ -20,7 +20,7 @@ string func(string s, string oldVal, string newVal){
         if(loc != string::npos){
             s.erase(loc, oldLen);
             s.insert(loc, newVal);
-            l += (newLen+loc);
+            l = (newLen+loc);
 
         }
         else{
